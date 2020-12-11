@@ -11,4 +11,27 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <hutool.version>5.5.0</hutool.version>
+    </properties>
+
+    <dependencies>
+        <!-- lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- hutool -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId></groupId>
+            <artifactId></artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

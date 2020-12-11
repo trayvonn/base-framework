@@ -10,6 +10,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common-spring-boot-starter</artifactId>
+    <version>1.1-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.admin</groupId>
+            <artifactId>core</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
