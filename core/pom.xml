@@ -28,10 +28,6 @@
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
         </dependency>
-        <dependency>
-            <groupId></groupId>
-            <artifactId></artifactId>
-        </dependency>
     </dependencies>
 
 </project>
