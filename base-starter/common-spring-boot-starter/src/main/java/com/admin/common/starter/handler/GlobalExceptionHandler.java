@@ -24,10 +24,10 @@ import java.util.*;
 
 /**
  * @author 吴邪
- * @date: 2020/8/6 14:42
+ * @since  2020/8/6 14:42
  */
 @Slf4j
-@RestControllerAdvice(basePackages = "")
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     /**
@@ -101,9 +101,9 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public R<?> handleUnknownException(Exception ex) {
+    public R<?> handleUnknownException(HttpServletRequest request,Exception ex) {
         log.error("内部异常!", ex);
-//        recordDetailIfWeb(request);
+        recordDetailIfWeb(request);
         return R.exception();
     }
 
