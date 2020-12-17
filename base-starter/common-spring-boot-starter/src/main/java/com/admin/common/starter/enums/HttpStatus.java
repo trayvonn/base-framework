@@ -1,4 +1,4 @@
-package com.admin.core.enums;
+package com.admin.common.starter.enums;
 
 
 import lombok.AllArgsConstructor;

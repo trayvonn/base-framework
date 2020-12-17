@@ -1,6 +1,6 @@
-package com.admin.core.base;
+package com.admin.common.starter.base;
 
-import com.admin.core.enums.HttpStatus;
+import com.admin.common.starter.enums.HttpStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

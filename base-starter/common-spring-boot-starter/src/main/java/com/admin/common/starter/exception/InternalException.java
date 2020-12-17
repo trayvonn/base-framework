@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.core.enums.HttpStatus;
+import com.admin.common.starter.enums.HttpStatus;
 
 /**
  * 系统异常

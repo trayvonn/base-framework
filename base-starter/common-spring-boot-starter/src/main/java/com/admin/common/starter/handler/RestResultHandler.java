@@ -2,7 +2,7 @@ package com.admin.common.starter.handler;
 
 import cn.hutool.json.JSONUtil;
 import com.admin.common.starter.annotation.RestWrapIgnore;
-import com.admin.core.base.R;
+import com.admin.common.starter.base.R;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
