@@ -18,32 +18,32 @@ public class R<T> {
     private String msg;
     private T data;
 
-    public static R success() {
-        return new R(HttpStatus.SUCCESS, null);
+    public static <T> R<T> success() {
+        return new R<>(HttpStatus.SUCCESS, null);
     }
 
-    public static R fail(HttpStatus httpStatus) {
-        return new R(httpStatus, null);
+    public static <T> R<T> fail(HttpStatus httpStatus) {
+        return new R<>(httpStatus, null);
     }
 
-    public static R fail(HttpStatus httpStatus, String msg) {
-        return new R(httpStatus.getCode(), msg, null);
+    public static <T> R<T> fail(HttpStatus httpStatus, String msg) {
+        return new R<>(httpStatus.getCode(), msg, null);
     }
 
-    public static R fail(int code, String msg) {
-        return new R(code, msg, null);
+    public static <T> R<T> fail(int code, String msg) {
+        return new R<>(code, msg, null);
     }
 
-    public static R fail(String msg) {
-        return new R(HttpStatus.INTERNAL_EXCEPTION.getCode(), msg, null);
+    public static <T> R<T> fail(String msg) {
+        return new R<>(HttpStatus.INTERNAL_EXCEPTION.getCode(), msg, null);
     }
 
-    public static R exception() {
-        return new R(HttpStatus.INTERNAL_EXCEPTION, null);
+    public static <T> R<T> exception() {
+        return new R<>(HttpStatus.INTERNAL_EXCEPTION, null);
     }
 
-    public static <T> R success(T data) {
-        return new R(HttpStatus.SUCCESS, data);
+    public static <T> R<T> success(T data) {
+        return new R<>(HttpStatus.SUCCESS, data);
     }
 
     public R(HttpStatus httpStatus, T data) {
