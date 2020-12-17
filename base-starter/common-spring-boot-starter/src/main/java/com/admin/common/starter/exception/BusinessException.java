@@ -1,13 +1,15 @@
 package com.admin.common.starter.exception;
 
 import com.admin.core.enums.HttpStatus;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author 吴邪
  * craeted: 2020/1/9
  */
-@Data
+@Getter
+@Setter
 public abstract class BusinessException extends RuntimeException {
     private static final long serialVersionUID = -6175808415650755522L;
     private int code;

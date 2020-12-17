@@ -8,7 +8,6 @@ import com.admin.core.enums.HttpStatus;
 import com.fasterxml.jackson.core.JsonParseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.stereotype.Component;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -27,9 +26,8 @@ import java.util.*;
  * @author 吴邪
  * @date: 2020/8/6 14:42
  */
-@Component
-@RestControllerAdvice(basePackages = "")
 @Slf4j
+@RestControllerAdvice(basePackages = "")
 public class GlobalExceptionHandler {
 
     /**

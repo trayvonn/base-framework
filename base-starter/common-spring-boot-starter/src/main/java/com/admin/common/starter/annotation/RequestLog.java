@@ -8,8 +8,8 @@ import java.lang.annotation.Target;
 /**
  * 记录接口日志注解
  *
- * @author 吴邪
- * @date: 2020/6/5 14:26
+ * @author trayvonn
+ * @since  2020/6/5 14:26
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(value = RetentionPolicy.RUNTIME)
