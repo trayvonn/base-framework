@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 
 /**
  * @author 吴邪
@@ -10,10 +10,10 @@ import com.admin.common.starter.enums.HttpStatusEnum;
 public class ParameterException extends BusinessException {
 
     public ParameterException() {
-        super(HttpStatusEnum.BAD_REQUEST);
+        super(HttpStatus.BAD_REQUEST);
     }
 
     public ParameterException(String msg) {
-        super(HttpStatusEnum.BAD_REQUEST, msg);
+        super(HttpStatus.BAD_REQUEST, msg);
     }
 }

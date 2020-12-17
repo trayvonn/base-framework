@@ -42,7 +42,7 @@ public class LogAspect {
         String className = Convert.toStr(pointCutInfo.get("className"));
         String methodName = Convert.toStr(pointCutInfo.get("methodName"));
 
-        String requestId = null;// getRequestId();
+        String requestId =  getRequestId();
 
         Map<Class<?>, Object> args = (Map<Class<?>, Object>) pointCutInfo.get("args");
         log.info("执行开始({})->{}.{}({})", requestId, className, methodName, getArgsToString(args));

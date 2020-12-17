@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 
 /**
  * @author 吴邪
@@ -10,10 +10,10 @@ import com.admin.common.starter.enums.HttpStatusEnum;
 public class UnauthorizedException extends BusinessException {
 
     public UnauthorizedException() {
-        super(HttpStatusEnum.UNAUTHORIZED);
+        super(HttpStatus.UNAUTHORIZED);
     }
 
     public UnauthorizedException(String msg) {
-        super(HttpStatusEnum.UNAUTHORIZED, msg);
+        super(HttpStatus.UNAUTHORIZED, msg);
     }
 }

@@ -2,9 +2,9 @@ package com.admin.common.starter.handler;
 
 import cn.hutool.json.JSONUtil;
 import com.admin.common.starter.aspect.LogAspect;
-import com.admin.common.starter.base.R;
-import com.admin.common.starter.enums.HttpStatusEnum;
 import com.admin.common.starter.exception.BusinessException;
+import com.admin.core.base.R;
+import com.admin.core.enums.HttpStatus;
 import com.fasterxml.jackson.core.JsonParseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -40,11 +40,11 @@ public class GlobalExceptionHandler {
     public R<?> handleHttpMessageNotReadableException(HttpMessageNotReadableException e) {
         if (e.getCause() != null) {
             if (e.getCause() instanceof JsonParseException) {
-                return R.fail(HttpStatusEnum.BAD_REQUEST, "JSON格式错误");
+                return R.fail(HttpStatus.BAD_REQUEST, "JSON格式错误");
             }
         }
 
-        return R.fail(HttpStatusEnum.INTERNAL_EXCEPTION);
+        return R.fail(HttpStatus.INTERNAL_EXCEPTION);
     }
 
     /**
@@ -55,7 +55,7 @@ public class GlobalExceptionHandler {
     public R<?> handleConstraintViolationException(ConstraintViolationException e) {
         List<ConstraintViolation<?>> violationList = new ArrayList<>(e.getConstraintViolations());
         ConstraintViolation<?> violation = violationList.get(0);
-        return R.fail(HttpStatusEnum.BAD_REQUEST, violation.getMessage());
+        return R.fail(HttpStatus.BAD_REQUEST, violation.getMessage());
     }
 
     /**
@@ -67,9 +67,9 @@ public class GlobalExceptionHandler {
         BindingResult bindingResult = e.getBindingResult();
         FieldError fieldError = bindingResult.getFieldError();
         if (fieldError != null) {
-            return R.fail(HttpStatusEnum.BAD_REQUEST, fieldError.getDefaultMessage());
+            return R.fail(HttpStatus.BAD_REQUEST, fieldError.getDefaultMessage());
         }
-        return R.fail(HttpStatusEnum.BAD_REQUEST);
+        return R.fail(HttpStatus.BAD_REQUEST);
     }
 
     /**
@@ -81,15 +81,15 @@ public class GlobalExceptionHandler {
         BindingResult bindingResult = e.getBindingResult();
         FieldError fieldError = bindingResult.getFieldError();
         if (fieldError != null) {
-            return R.fail(HttpStatusEnum.BAD_REQUEST, fieldError.getDefaultMessage());
+            return R.fail(HttpStatus.BAD_REQUEST, fieldError.getDefaultMessage());
         }
-        return R.fail(HttpStatusEnum.BAD_REQUEST);
+        return R.fail(HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(MissingServletRequestParameterException.class)
     @ResponseBody
     public R<?> handleMissingServletRequestParameterException() {
-        return R.fail(HttpStatusEnum.BAD_REQUEST);
+        return R.fail(HttpStatus.BAD_REQUEST);
     }
 
     /**

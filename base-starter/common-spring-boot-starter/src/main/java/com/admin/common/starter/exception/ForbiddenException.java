@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 
 /**
  * @author 吴邪
@@ -10,10 +10,10 @@ import com.admin.common.starter.enums.HttpStatusEnum;
 public class ForbiddenException extends BusinessException {
 
     public ForbiddenException(String msg) {
-        super(HttpStatusEnum.FORBIDDEN, msg);
+        super(HttpStatus.FORBIDDEN, msg);
     }
 
     public ForbiddenException() {
-        super(HttpStatusEnum.FORBIDDEN);
+        super(HttpStatus.FORBIDDEN);
     }
 }

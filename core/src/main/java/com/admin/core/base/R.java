@@ -1,6 +1,6 @@
-package com.admin.common.starter.base;
+package com.admin.core.base;
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -19,14 +19,14 @@ public class R<T> {
     private T data;
 
     public static R success() {
-        return new R(HttpStatusEnum.SUCCESS, null);
+        return new R(HttpStatus.SUCCESS, null);
     }
 
-    public static R fail(HttpStatusEnum httpStatus) {
+    public static R fail(HttpStatus httpStatus) {
         return new R(httpStatus, null);
     }
 
-    public static R fail(HttpStatusEnum httpStatus, String msg) {
+    public static R fail(HttpStatus httpStatus, String msg) {
         return new R(httpStatus.getCode(), msg, null);
     }
 
@@ -35,18 +35,18 @@ public class R<T> {
     }
 
     public static R fail(String msg) {
-        return new R(HttpStatusEnum.INTERNAL_EXCEPTION.getCode(), msg, null);
+        return new R(HttpStatus.INTERNAL_EXCEPTION.getCode(), msg, null);
     }
 
     public static R exception() {
-        return new R(HttpStatusEnum.INTERNAL_EXCEPTION, null);
+        return new R(HttpStatus.INTERNAL_EXCEPTION, null);
     }
 
     public static <T> R success(T data) {
-        return new R(HttpStatusEnum.SUCCESS, data);
+        return new R(HttpStatus.SUCCESS, data);
     }
 
-    public R(HttpStatusEnum httpStatus, T data) {
+    public R(HttpStatus httpStatus, T data) {
         this.code = httpStatus.getCode();
         this.msg = httpStatus.getMsg();
         this.data = data;

@@ -1,6 +1,6 @@
 package com.admin.common.starter.exception;
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 import lombok.Data;
 
 /**
@@ -13,13 +13,13 @@ public abstract class BusinessException extends RuntimeException {
     private int code;
     private String msg;
 
-    public BusinessException(HttpStatusEnum status) {
+    public BusinessException(HttpStatus status) {
         super(status.getMsg());
         this.code = status.getCode();
         this.msg = status.getMsg();
     }
 
-    public BusinessException(HttpStatusEnum status, String msg) {
+    public BusinessException(HttpStatus status, String msg) {
         super(msg);
         this.code = status.getCode();
         this.msg = msg;

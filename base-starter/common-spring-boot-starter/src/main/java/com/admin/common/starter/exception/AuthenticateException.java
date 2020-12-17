@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 
 /**
  * @author 吴邪
@@ -10,10 +10,10 @@ import com.admin.common.starter.enums.HttpStatusEnum;
 public class AuthenticateException extends BusinessException {
 
     public AuthenticateException(String msg) {
-        super(HttpStatusEnum.AUTHENTICATE_FAIL, msg);
+        super(HttpStatus.AUTHENTICATE_FAIL, msg);
     }
 
     public AuthenticateException() {
-        super(HttpStatusEnum.AUTHENTICATE_FAIL);
+        super(HttpStatus.AUTHENTICATE_FAIL);
     }
 }

@@ -1,4 +1,4 @@
-package com.admin.common.starter.enums;
+package com.admin.core.enums;
 
 
 import lombok.AllArgsConstructor;
@@ -12,7 +12,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum HttpStatusEnum {
+public enum HttpStatus {
     SUCCESS(0, "成功"),
     BAD_REQUEST(400, "无效的参数"),
     UNAUTHORIZED(401, "尚未认证"),

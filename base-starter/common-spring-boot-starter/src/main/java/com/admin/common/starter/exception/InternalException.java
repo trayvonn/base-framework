@@ -1,7 +1,7 @@
 package com.admin.common.starter.exception;
 
 
-import com.admin.common.starter.enums.HttpStatusEnum;
+import com.admin.core.enums.HttpStatus;
 
 /**
  * @author 吴邪
@@ -10,10 +10,10 @@ import com.admin.common.starter.enums.HttpStatusEnum;
 public class InternalException extends BusinessException {
 
     public InternalException() {
-        super(HttpStatusEnum.INTERNAL_EXCEPTION);
+        super(HttpStatus.INTERNAL_EXCEPTION);
     }
 
     public InternalException(String msg) {
-        super(HttpStatusEnum.INTERNAL_EXCEPTION, msg);
+        super(HttpStatus.INTERNAL_EXCEPTION, msg);
     }
 }
