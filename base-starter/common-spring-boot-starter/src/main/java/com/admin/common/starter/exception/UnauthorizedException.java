@@ -4,8 +4,7 @@ package com.admin.common.starter.exception;
 import com.admin.core.enums.HttpStatus;
 
 /**
- * @author 吴邪
- * craeted: 2020/1/9
+ * 尚未认证
  */
 public class UnauthorizedException extends BusinessException {
 

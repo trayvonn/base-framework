@@ -19,8 +19,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
- * @author 吴邪
- * @since  2020/8/6 14:42
+ * 返回数据封装
  */
 @RestControllerAdvice
 public class RestResultHandler implements ResponseBodyAdvice<Object> {

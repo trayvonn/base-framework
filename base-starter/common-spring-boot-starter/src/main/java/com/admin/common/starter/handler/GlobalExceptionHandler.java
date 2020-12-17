@@ -23,8 +23,7 @@ import javax.validation.ConstraintViolationException;
 import java.util.*;
 
 /**
- * @author 吴邪
- * @since  2020/8/6 14:42
+ * 全局异常处理器
  */
 @Slf4j
 @RestControllerAdvice

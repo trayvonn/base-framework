@@ -21,9 +21,6 @@ import java.util.*;
 
 /**
  * 记录接口日志切面
- *
- * @author 吴邪
- * @date 2020/6/5 14:26
  */
 @Aspect
 @Slf4j

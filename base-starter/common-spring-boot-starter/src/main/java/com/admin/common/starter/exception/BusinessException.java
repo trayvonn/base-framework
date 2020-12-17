@@ -5,8 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author 吴邪
- * craeted: 2020/1/9
+ * 业务异常
  */
 @Getter
 @Setter
