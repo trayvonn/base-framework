@@ -12,20 +12,14 @@
     <artifactId>common-spring-boot-starter</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <admin.core.version>1.0-SNAPSHOT</admin.core.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.admin</groupId>
             <artifactId>core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${admin.core.version}</version>
         </dependency>
     </dependencies>
 
