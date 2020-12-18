@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @Data
 @AllArgsConstructor
-public class R<T> {
+public class R<T> implements BaseResponse {
 
     private int code;
     private String msg;
@@ -53,4 +53,8 @@ public class R<T> {
     }
 
 
+    @Override
+    public boolean isSuccess() {
+        return HttpStatus.SUCCESS.getCode()==code;
+    }
 }
